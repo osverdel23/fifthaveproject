@@ -20,12 +20,15 @@
     &:hover {
       color: darken($primary, 10%);
     }
+    img {
+      content:url('/assets/img/clients/logo2.png')
+    }
   }
   .navbar-nav {
     .nav-item {
       .nav-link {
         font-size: 90%;
-        font-weight: 400;
+        font-weight: 100;
         padding: 0.75em 0;
         letter-spacing: 1px;
         color: white;
@@ -52,11 +55,15 @@
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s;
+      img {
+        content:url('/assets/img/clients/logo.png')
+      }
     }
     .navbar-nav {
       .nav-item {
         .nav-link {
           padding: 1.1em 1em !important;
+          color: #355641;
         }
       }
     }
@@ -67,6 +74,26 @@
       .navbar-brand {
         font-size: 1.25em;
         padding: 12px 0;
+      }
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            color: white;
+            &.active,
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+      img {
+        margin-top: 6px;
+        height: 48px;
+        width: 48px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        content:url('/assets/img/clients/logo2.png')
       }
     }
   }

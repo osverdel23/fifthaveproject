@@ -1,0 +1,59 @@
+<!-- Inspiration -->
+{% if site.locale and site.locale != "" and site.locale != nil %}
+  <section class="page-section" id="{{ site.data.sitetext[site.locale].inspiration.section | default: "inspiration" }}">
+    <div class="container">
+	
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].inspiration.title | default: "Inspiration" }}</h2>
+          {% if site.data.sitetext[site.locale].inspiration.text %}
+		  <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].inspiration.text }}</h3>
+		  {% endif %}
+        </div>
+      </div>
+	  
+      <div class="row text-center">
+	  {% for inspire in site.data.sitetext[site.locale].inspiration.list %}
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="{{ inspire.icon | default: "fas fa-shopping-cart" }} fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="inspire-heading"><a href="#{{ inspire.link }}">{{ inspire.title | markdownify }}</a></h4>
+          {% if inspire.desc %}<div class="text-muted">{{ inspire.desc | markdownify }}</div>{% endif %}
+        </div>
+	  {% endfor %}
+      </div>
+	  
+    </div>
+  </section>
+{% else %}
+<section class="page-section" id="{{ site.data.sitetext.inspiration.section | default: "inspiration" }}">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">{{ site.data.sitetext.inspiration.title | default: "Inspiration" }}</h2>
+        {% if site.data.sitetext.inspiration.text %}
+    <h3 class="section-subheading text-muted">{{ site.data.sitetext.inspiration.text }}</h3>
+    {% endif %}
+      </div>
+    </div>
+  
+    <div class="row text-center">
+  {% for inspire in site.data.sitetext.inspiration.list %}
+      <div class="col-md-4">
+        <span class="fa-stack fa-4x">
+          <i class="fas fa-circle fa-stack-2x text-primary"></i>
+          <i class="{{ inspire.icon | default: "fas fa-shopping-cart" }} fa-stack-1x fa-inverse"></i>
+        </span>
+        <h4 class="inspire-heading">{{ inspire.title | markdownify }}</h4>
+        {% if inspire.desc %}<div class="text-muted">{{ inspire.desc | markdownify }}</div>{% endif %}
+      </div>
+  {% endfor %}
+    </div>
+  
+  </div>
+</section>
+{% endif %}
+<!-- End Inspiration -->

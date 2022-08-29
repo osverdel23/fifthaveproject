@@ -11,20 +11,18 @@
 # -----------------
 en: &DEFAULT_EN
   nav:
-    - title: "Services"
-      section: services
-    - title: "Portfolio"
-      section: portfolio
-    - title: "About"
-      section: about
+    - title: "Shop"
+      section: shop
+    # - title: "Inspiration"
+    #   section: inspiration
+    # - title: "About"
+    #   section: about
     - title: "Timeline"
       section: timeline
-    - title: "Team"
-      section: team
-    - title: "Contact"
-      section: contact
-    - title: "Theme Source"
-      url: https://github.com/raviriley/agency-jekyll-theme/
+    # - title: "Team"
+    #   section: team
+    # - title: "Contact"
+    #   section: contact
 en-US:
   <<: *DEFAULT_EN
 en-CA:
@@ -48,8 +46,8 @@ es: &DEFAULT_ES
       section: cronologia
     - title: "Equipo"
       section: equipo
-    - title: "Contáctenos"
-      section: contacto
+    # - title: "Contáctenos"
+    #   section: contacto
     - title: "Fuente de la plantilla"
       url: https://github.com/raviriley/agency-jekyll-theme/
 es-ES:
@@ -71,7 +69,7 @@ de: &DEFAULT_DE
       section: Geschichte
     - title: "Team"
       section: Team
-    - title: "Kontakt"
-      section: Kontakt
+    # - title: "Kontakt"
+    #   section: Kontakt
     - title: "Quellcode des Themas"
       url: https://github.com/raviriley/agency-jekyll-theme/
