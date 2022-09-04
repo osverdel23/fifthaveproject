@@ -25,8 +25,5 @@ $inspiration-image: "{{ site.data.style.inspiration-image }}";
 
 // Layout
 @import "layout/masthead.scss";
-@import "layout/inspiration.scss";
 @import "layout/shop.scss";
-@import "layout/timeline.scss";
-@import "layout/team.scss";
-@import "layout/footer.scss";
+@import "layout/inspiration.scss";

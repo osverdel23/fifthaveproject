@@ -40,26 +40,26 @@ en: &DEFAULT_EN
     section: shop
     closebutton: "Close Project"
 
-  timeline:
+  inspiration:
     title: "Get Inspired"
-    # text: "Lorem ipsum timeline"
-    section: timeline
+    # text: "Lorem ipsum inspiration"
+    section: inspiration
     # left is the default
     #start_align: "left"
     events:
       - title: "PRODUCTIVITY"
         desc: "Aesthetically pleasing environment promotes productivity. **Our pieces** help you create a space that visually appealing and positively affects your mind. Your creativity is activated when you surround yourself with little pieces that please your eye."
-        image: assets/img/timeline/1.jpg
+        image: assets/img/inspiration/1.jpg
         id: productivity
         alt: productivity
       - title: "ABUNDANCE"
         desc: "Unwind and strengthen your mind, body, and soul. Meditation is the most effective when you are surrounded by the most optimal atmosphere for YOU.  With **our offer of personal details** you can arrange your space that just being present in would already be a sort of meditation for you."
-        image: assets/img/timeline/2.jpg
+        image: assets/img/inspiration/2.jpg
         id: abundance
         alt: abundance
       - title: "RELAXATION"
         desc: "Mind relaxation comes from the idea of treating yourself. The feeling can be achieved by setting your mood with **our strategic lighting**. Ideal way to create a relaxing environment that fits you is being able to customize the way your room is illuminated. Especially, it would be hard not to relax when greenery is involved in the internal space arrangement."
-        image: assets/img/timeline/3.jpg
+        image: assets/img/inspiration/3.jpg
         id: relaxation
         alt: relaxation
     # end: "Be Part <br> of Our <br> Story!"
@@ -192,9 +192,9 @@ es: &DEFAULT_ES
     section: portafolio
     closebutton: "Cerrar Proyecto"
 
-  timeline:
+  inspiration:
     title: "Cronología"
-    text: "Lorem ipsum timeline"
+    text: "Lorem ipsum inspiration"
     section: cronologia
     # left is the default
     #start_align: "left"
@@ -202,22 +202,22 @@ es: &DEFAULT_ES
       - title: "Nuestro Humilde Comienzo"
         year: "2009-2011"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
-        image: assets/img/timeline/1.jpg
+        image: assets/img/inspiration/1.jpg
         alt:
       - title: "Una Agencia nace"
         year: "March 2011"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
-        image: assets/img/timeline/2.jpg
+        image: assets/img/inspiration/2.jpg
         alt:
       - title: "La plantilla Jekyll es creada"
         year: "2019"
         desc: "Ravi Riley convirtió Agency, una plantilla basada en Bootstrap, en una plantilla de Jekyll. La plantilla Jekyll puede ser instalada commo una gema de Ruby (Ruby gem) o remotamente. Para más información, visite la documentación."
-        image: assets/img/timeline/3.jpg
+        image: assets/img/inspiration/3.jpg
         alt: image alt text
       - title: "Título"
         year: "2009-2011"
         desc: "Su descripción aquí, **Markdown** es soportado completamente."
-        image: assets/img/timeline/4.jpg
+        image: assets/img/inspiration/4.jpg
         alt:
         # you can enforce the alignment
         align: right
@@ -347,9 +347,9 @@ de: &DEFAULT_DE
     section: Portfolio
     closebutton: "Schließen"
 
-  timeline:
+  inspiration:
     title: "Geschichte"
-    text: "Lorem ipsum timeline"
+    text: "Lorem ipsum inspiration"
     section: Geschichte
     # left is the default
     #start_align: "left"
@@ -357,22 +357,22 @@ de: &DEFAULT_DE
       - title: "Unsere Anfänge"
         year: "2009-2011"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
-        image: assets/img/timeline/1.jpg
+        image: assets/img/inspiration/1.jpg
         alt:
       - title: "Gründung der Firma"
         year: "März 2011"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
-        image: assets/img/timeline/2.jpg
+        image: assets/img/inspiration/2.jpg
         alt:
       - title: "Das Jekyll-Thema wurde erstellt"
         year: "2019"
         desc: "Ravi Riley wandelte Agency, ein auf Bootstrap basierendes Thema, in ein Jekyll-Thema um. Man kann das Jekyll-Thema als Ruby-Gem oder remotely installieren. Für mehr Informationen, schauen Sie sich die Dokumentation an."
-        image: assets/img/timeline/3.jpg
+        image: assets/img/inspiration/3.jpg
         alt: Bildbeschreibung
       - title: "Titel"
         year: "2009-2011"
         desc: "Hier können Sie etwas mit **Markdown** einfügen."
-        image: assets/img/timeline/4.jpg
+        image: assets/img/inspiration/4.jpg
         alt:
         # you can enforce the alignment
         align: right

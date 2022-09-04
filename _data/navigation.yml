@@ -17,8 +17,8 @@ en: &DEFAULT_EN
     #   section: inspiration
     # - title: "About"
     #   section: about
-    - title: "Timeline"
-      section: timeline
+    - title: "Inspiration"
+      section: inspiration
     # - title: "Team"
     #   section: team
     # - title: "Contact"

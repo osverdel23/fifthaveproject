@@ -1,59 +1,121 @@
-<!-- Inspiration -->
+<!-- About -->
 {% if site.locale and site.locale != "" and site.locale != nil %}
-  <section class="page-section" id="{{ site.data.sitetext[site.locale].inspiration.section | default: "inspiration" }}">
+  <section class="bg-light page-section" id="{{ site.data.sitetext[site.locale].inspiration.section | default: "about" }}">
     <div class="container">
-	
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].inspiration.title | default: "Inspiration" }}</h2>
-          {% if site.data.sitetext[site.locale].inspiration.text %}
-		  <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].inspiration.text }}</h3>
+          <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].inspiration.title | markdownify | default: "About" }}</h2>
+          <!-- <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].inspiration.text | default: "inspiration"}}</h3> -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="inspiration">
+      {%- assign align = site.data.sitetext[site.locale].inspiration.start_align -%}
+      {%- for event in site.data.sitetext[site.locale].inspiration.events -%}
+            {%- if align == "right" -%}
+              {%- if event.align and event.align == "left" -%}
+                {%- assign align = "right" -%}
+                <li>
+              {%- else -%}
+                {%- assign align = "left" %}
+                <li class="inspiration-inverted">
+              {% endif %}
+            {% else %}
+              {%- if event.align and event.align == "right" -%}
+                {%- assign align = "left" -%}
+                <li class="inspiration-inverted">
+              {%- else -%}
+                {%- assign align = "right" %}
+                <li>
+              {% endif %}
+            {%- endif -%}
+              <div class="inspiration-image">
+                <img class="rounded-circle img-fluid" src="{{ event.image }}" alt="{{ event.alt | default: ""}}">
+              </div>
+              <div class="inspiration-panel">
+                <div class="inspiration-heading">
+                  <h4>{{ event.year | markdownify }}</h4>
+                  <h4 class="subheading">{{ event.title }}</h4>
+                </div>
+                <div class="inspiration-body">
+                  <div class="text-muted">{{ event.desc | markdownify }}</div>
+                </div>
+              </div>
+            </li>
+		  {% endfor %}	
+            
+		  {% if site.data.sitetext[site.locale].inspiration.end %}	
+			<li class="inspiration-inverted">
+              <div class="inspiration-image">
+                <h4>{{ site.data.sitetext[site.locale].inspiration.end }}</h4>
+              </div>
+            </li>
 		  {% endif %}
+
+          </ul>
         </div>
       </div>
-	  
-      <div class="row text-center">
-	  {% for inspire in site.data.sitetext[site.locale].inspiration.list %}
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="{{ inspire.icon | default: "fas fa-shopping-cart" }} fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="inspire-heading"><a href="#{{ inspire.link }}">{{ inspire.title | markdownify }}</a></h4>
-          {% if inspire.desc %}<div class="text-muted">{{ inspire.desc | markdownify }}</div>{% endif %}
-        </div>
-	  {% endfor %}
-      </div>
-	  
     </div>
   </section>
 {% else %}
-<section class="page-section" id="{{ site.data.sitetext.inspiration.section | default: "inspiration" }}">
+<section class="bg-light page-section" id="{{ site.data.sitetext.inspiration.section | default: "about" }}">
   <div class="container">
-
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">{{ site.data.sitetext.inspiration.title | default: "Inspiration" }}</h2>
-        {% if site.data.sitetext.inspiration.text %}
-    <h3 class="section-subheading text-muted">{{ site.data.sitetext.inspiration.text }}</h3>
+        <h2 class="section-heading text-uppercase">{{ site.data.sitetext.inspiration.title | markdownify | default: "About" }}</h2>
+        <h3 class="section-subheading text-muted">{{ site.data.sitetext.inspiration.text | default: "inspiration"}}</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="inspiration">
+    {%- assign align = site.data.sitetext.inspiration.start_align -%}
+    {%- for event in site.data.sitetext.inspiration.events -%}
+          {%- if align == "right" -%}
+            {%- if event.align and event.align == "left" -%}
+              {%- assign align = "right" -%}
+              <li>
+            {%- else -%}
+              {%- assign align = "left" %}
+              <li class="inspiration-inverted">
+            {% endif %}
+          {% else %}
+            {%- if event.align and event.align == "right" -%}
+              {%- assign align = "left" -%}
+              <li class="inspiration-inverted">
+            {%- else -%}
+              {%- assign align = "right" %}
+              <li>
+            {% endif %}
+          {%- endif -%}
+            <div class="inspiration-image">
+              <img class="rounded-circle img-fluid" src="{{ event.image }}" alt="{{ event.alt | default: ""}}">
+            </div>
+            <div class="inspiration-panel" id="{{ event.id }}">
+              <div class="inspiration-heading">
+                <h4>{{ event.year | markdownify }}</h4>
+                <h4 class="subheading">{{ event.title }}</h4>
+              </div>
+              <div class="inspiration-body">
+                <div class="text-muted">{{ event.desc | markdownify }}</div>
+              </div>
+            </div>
+          </li>
+    {% endfor %}	
+          
+    {% if site.data.sitetext.inspiration.end %}	
+    <li class="inspiration-inverted">
+            <div class="inspiration-image">
+              <h4>{{ site.data.sitetext.inspiration.end }}</h4>
+            </div>
+          </li>
     {% endif %}
+
+        </ul>
       </div>
     </div>
-  
-    <div class="row text-center">
-  {% for inspire in site.data.sitetext.inspiration.list %}
-      <div class="col-md-4">
-        <span class="fa-stack fa-4x">
-          <i class="fas fa-circle fa-stack-2x text-primary"></i>
-          <i class="{{ inspire.icon | default: "fas fa-shopping-cart" }} fa-stack-1x fa-inverse"></i>
-        </span>
-        <h4 class="inspire-heading">{{ inspire.title | markdownify }}</h4>
-        {% if inspire.desc %}<div class="text-muted">{{ inspire.desc | markdownify }}</div>{% endif %}
-      </div>
-  {% endfor %}
-    </div>
-  
   </div>
 </section>
 {% endif %}
-<!-- End Inspiration -->
+<!-- End About -->
